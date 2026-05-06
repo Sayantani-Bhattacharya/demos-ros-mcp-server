@@ -4,6 +4,12 @@ from launch_ros.actions import Node
 
 from launch import LaunchDescription
 
+# The launch file has 3 functions: 
+# 1. starts the gazebo sim
+# 2. translate info from gazebo format to ROS DDS format [ros_gz_bridge]
+# 3. starts rosbridge websocket: for the ai to read. 
+
+
 
 def generate_launch_description():
     """Generate the launch description for Gazebo, Bridge, Rosbridge AND Rosapi."""
