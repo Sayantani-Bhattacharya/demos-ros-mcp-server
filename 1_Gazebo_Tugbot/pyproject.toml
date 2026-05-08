@@ -16,7 +16,9 @@ dependencies = [
     "opencv-python>=4.11.0.86",
     "pillow>=11.3.0",
     "websocket-client>=1.8.0",
-    "pymongo",    
-    "tornado",    
+    "pymongo",
+    "tornado",
     "netifaces",
+    "numpy>=2.2.6",
+    "cbor2>=6.0.1",
 ]

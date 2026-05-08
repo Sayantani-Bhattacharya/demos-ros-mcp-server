@@ -7,9 +7,8 @@ from launch import LaunchDescription
 # The launch file has 3 functions: 
 # 1. starts the gazebo sim
 # 2. translate info from gazebo format to ROS DDS format [ros_gz_bridge]
-# 3. starts rosbridge websocket: for the ai to read. 
-
-
+# 3. starts rosbridge websocket: for ros msg to be conversted to json, for the ai to read. 
+# 4. starts rosapi: for ros service calls. It exposes ROS system introspection stuff, like what topics are available etc. 
 
 def generate_launch_description():
     """Generate the launch description for Gazebo, Bridge, Rosbridge AND Rosapi."""
@@ -44,7 +43,7 @@ def generate_launch_description():
 
     # 4. Rosbridge Arguments
     port_arg = DeclareLaunchArgument(
-        "port", default_value="9090", description="Port for rosbridge websocket server"
+        "port", default_value="9091", description="Port for rosbridge websocket server"
     )
 
     # 5. Rosbridge Node (The Connection)
